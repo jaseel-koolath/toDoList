@@ -10,7 +10,7 @@ var items = [];
 var work_list = [];
 
 app.get("/", function(req, res) {
-    let day = date();
+    let day = date.getDate();
     res.render("list", {listTitle: day, newItem: items});
 });
 app.post("/", function(req, res) {
